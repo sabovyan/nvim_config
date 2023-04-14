@@ -1,2 +1,4 @@
 return {
-  'folke/which-key.nvim', opts = {} }
+  'folke/which-key.nvim',
+  opts = {}
+}
