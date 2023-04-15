@@ -20,6 +20,8 @@ return {
     }
 
     local mappings = {
+      ["e"] = { '<cmd>NeoTreeRevealToggle<CR>', "Open neo tree" },
+      ["o"] = { '<cmd>NeoTreeFocusToggle<CR>', "Focus Neo Tree" },
       -- See `:help telescope.builtin`
       ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
       ["<space>"] = { require('telescope.builtin').buffers, '[ ] Find existing buffers' },

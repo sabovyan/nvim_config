@@ -9,11 +9,16 @@ return {
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
   },
-  config = function()
-    require('neo-tree').setup {
-      vim.keymap.set('n', '<leader>e', '<cmd>NeoTreeRevealToggle<CR>', { desc = "Open neo tree" }),
-      vim.keymap.set('n', '<leader>o', '<cmd>NeoTreeFocusToggle<CR>', { desc = "Focus Neo Tree" })
-
-    }
-  end,
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        never_show = {
+          ".git",
+        },
+      },
+    },
+  },
 }
