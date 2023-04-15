@@ -22,6 +22,12 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  {
+    'echasnovski/mini.animate',
+    config = function()
+      require("mini.animate").setup()
+    end
+  },
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
