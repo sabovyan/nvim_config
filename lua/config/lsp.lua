@@ -33,7 +33,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
 
   nmap('<leader>l', vim.lsp.buf.format, 'Fromat Buffer')
-  nmap('<leader>s', '<cmd>:w<CR>', 'Fromat Buffer')
 
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
