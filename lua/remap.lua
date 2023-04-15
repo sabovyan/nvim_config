@@ -4,9 +4,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open Navite Explorer" })
+-- vim.keymap.set("n", "<leader>ne", vim.cmd.Ex, { desc = "Open Navite Explorer" })
 vim.keymap.set("i", "jj", "<Esc>")
-
+-- vim.keymap.set("n", "<leader>Q", vim.cmd.q, { desc = "Close Editor"})
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })

@@ -10,6 +10,10 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    require('neo-tree').setup {}
+    require('neo-tree').setup {
+      vim.keymap.set('n', '<leader>e', '<cmd>NeoTreeRevealToggle<CR>', { desc = "Open neo tree" }),
+      vim.keymap.set('n', '<leader>o', '<cmd>NeoTreeFocusToggle<CR>', { desc = "Focus Neo Tree" })
+
+    }
   end,
 }
