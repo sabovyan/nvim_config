@@ -48,7 +48,7 @@ return {
         c = { "<cmd>Telescope commands<cr>", "Commands" },
         -- c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         d = { "<md> Telescope diagnostics<CR>", "Find diagnostics" },
-        f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find files" },
+        f = { "<cmd>Telescope find_files<cr>", "Find files" },
         g = { "<cmd>Telescope live_grep <cr>", "Find Text Pattern In All Files" },
         h = { "<cmd> Telescope help_tags<CR>", "Search help" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
