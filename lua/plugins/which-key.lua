@@ -22,8 +22,9 @@ return {
     local mappings = {
       ["e"] = { '<cmd>NeoTreeRevealToggle<CR>', "Open neo tree" },
       ["o"] = { '<cmd>NeoTreeFocusToggle<CR>', "Focus Neo Tree" },
+      ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" }, -- Close current file
       -- See `:help telescope.builtin`
-      ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
+      ["s"] = { "<cmd>w!<CR>", "Save" },             -- Save current file
       ["<space>"] = { require('telescope.builtin').buffers, '[ ] Find existing buffers' },
       ["/"] = { function()
         -- You can pass additional configuration to telescope to change theme, layout, etc.
@@ -39,7 +40,6 @@ return {
         ["l"] = { "<cmd>Lazy<CR>", "Lazy vim" }, -- Invoking plugin manager
       },
       b = {
-        ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" }, -- Close current file
         ["n"] = { "<cmd>e unknown<CR>", "New Buffer" },
       },
       -- Telescope
@@ -48,8 +48,8 @@ return {
         c = { "<cmd>Telescope commands<cr>", "Commands" },
         -- c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         d = { "<md> Telescope diagnostics<CR>", "Find diagnostics" },
-        f = { "<cmd>Telescope find_files<cr>", "Find files" },
-        g = { "<cmd>Telescope live_grep <cr>", "Find Text Pattern In All Files" },
+        f = { "<cmd>Telescope find_files<CR>", "Find files" },
+        g = { "<cmd>Telescope live_grep<cr>", "Find Text Pattern In All Files" },
         h = { "<cmd> Telescope help_tags<CR>", "Search help" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
@@ -57,6 +57,10 @@ return {
         -- r = { "<cmd>Telescope registers<cr>", "Registers" },
         r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
         w = { "<cmd> Telescope grep_string<CR>", "Search for current word" }
+      },
+      g = {
+        l = { "<cmd>LazyGit<cr>", "Lazy Git" },
+        b = { "<cmd>GBrowse<cr>", "Open In Browser" }
       },
       --   ["q"] = { "<cmd>wqall!<CR>", "Quit" },         -- Quit Neovim after saving the file
       --   -- TODO change save to ctrl - S
