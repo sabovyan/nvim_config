@@ -40,7 +40,8 @@ return {
         ["l"] = { "<cmd>Lazy<CR>", "Lazy vim" }, -- Invoking plugin manager
       },
       b = {
-        ["n"] = { "<cmd>e unknown<CR>", "New Buffer" },
+        n = { "<cmd>e unknown<CR>", "New Buffer" },
+        p = { "<cmd>BufferLineTogglePin<CR>", "Pin Buffer" }
       },
       -- Telescope
       f = {
@@ -56,18 +57,14 @@ return {
         p = { "<cmd> Telescope git_files<CR>", "Find in Git files" },
         -- r = { "<cmd>Telescope registers<cr>", "Registers" },
         r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-        t = {"<cmd>TodoTelescope<CR>", "Find hilighted comments"},
+        t = { "<cmd>TodoTelescope<CR>", "Find hilighted comments" },
         w = { "<cmd> Telescope grep_string<CR>", "Search for current word" }
       },
       g = {
         l = { "<cmd>LazyGit<cr>", "Lazy Git" },
         b = { "<cmd>GBrowse<cr>", "Open In Browser" }
       },
-      --   ["q"] = { "<cmd>wqall!<CR>", "Quit" },         -- Quit Neovim after saving the file
       --   -- TODO change save to ctrl - S
-      --   s = {
-      --     name = "Search",
-      --   },
     }
     wk.register(mappings, opts)
   end,
