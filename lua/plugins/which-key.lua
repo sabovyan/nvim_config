@@ -56,6 +56,7 @@ return {
         p = { "<cmd> Telescope git_files<CR>", "Find in Git files" },
         -- r = { "<cmd>Telescope registers<cr>", "Registers" },
         r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+        t = {"<cmd>TodoTelescope<CR>", "Find hilighted comments"},
         w = { "<cmd> Telescope grep_string<CR>", "Search for current word" }
       },
       g = {
