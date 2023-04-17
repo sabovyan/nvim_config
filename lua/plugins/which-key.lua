@@ -21,7 +21,14 @@ return {
 
     local mappings = {
       ["e"] = { '<cmd>NeoTreeRevealToggle<CR>', "Open neo tree" },
-      ["o"] = { '<cmd>NeoTreeFocusToggle<CR>', "Focus Neo Tree" },
+      -- ["o"] = { '<cmd>NeoTreeFocus<CR>', "Focus Neo Tree" },
+      ["o"] = { function()
+        if vim.bo.filetype == "neo-tree" then
+          vim.cmd.wincmd "p"
+        else
+          vim.cmd.Neotree "focus"
+        end
+      end, "Focus Neo Tree" },
       ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" }, -- Close current file
       -- See `:help telescope.builtin`
       ["s"] = { "<cmd>w!<CR>", "Save" },             -- Save current file
