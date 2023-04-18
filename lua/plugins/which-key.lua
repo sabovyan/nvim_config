@@ -47,8 +47,9 @@ return {
         ["l"] = { "<cmd>Lazy<CR>", "Lazy vim" }, -- Invoking plugin manager
       },
       b = {
-        n = { "<cmd>e unknown<CR>", "New Buffer" },
-        p = { "<cmd>BufferLineTogglePin<CR>", "Pin Buffer" }
+        x = { "<cmd>e unknown<CR>", "New Buffer" },
+        p = { "<cmd>BufferLineTogglePin<CR>", "Pin Buffer" },
+        n = { "<cmd>bnext<CR>", "Next Buffer" }
       },
       -- Telescope
       f = {
@@ -71,7 +72,7 @@ return {
         l = { "<cmd>LazyGit<cr>", "Lazy Git" },
         b = { "<cmd>GBrowse<cr>", "Open In Browser" }
       },
-      --   -- TODO change save to ctrl - S
+      -- TODO change save to ctrl - S
     }
     wk.register(mappings, opts)
   end,

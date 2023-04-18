@@ -2,6 +2,9 @@
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
+-- load vs-code like snippets from plugins (e.g. friendly-snippets)
+require("luasnip/loaders/from_vscode").lazy_load()
+
 luasnip.config.setup {}
 
 cmp.setup {
@@ -38,7 +41,9 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-  },
+    { name = "nvim_lsp" }, -- lsp
+    { name = "luasnip" },  -- snippets
+    { name = "buffer" },   -- text within current buffer
+    { name = "path" },     -- file system paths  },
+  }
 }
