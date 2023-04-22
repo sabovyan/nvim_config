@@ -20,6 +20,7 @@ return {
     }
 
     local mappings = {
+      ["t"] = { '<cmd>ToggleTerm<CR>', 'Open Terminal'},
       ["e"] = { '<cmd>NeoTreeRevealToggle<CR>', "Open neo tree" },
       -- ["o"] = { '<cmd>NeoTreeFocus<CR>', "Focus Neo Tree" },
       ["o"] = { function()
@@ -30,8 +31,8 @@ return {
         end
       end, "Focus Neo Tree" },
       ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" }, -- Close current file
-      -- See `:help telescope.builtin`
       ["s"] = { "<cmd>w!<CR>", "Save" },             -- Save current file
+      -- See `:help telescope.builtin`
       ["<space>"] = { require('telescope.builtin').buffers, '[ ] Find existing buffers' },
       ["/"] = { function()
         -- You can pass additional configuration to telescope to change theme, layout, etc.
@@ -58,7 +59,8 @@ return {
         -- c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         d = { "<md> Telescope diagnostics<CR>", "Find diagnostics" },
         f = { "<cmd>Telescope find_files<CR>", "Find files" },
-        g = { "<cmd>Telescope live_grep<cr>", "Find Text Pattern In All Files" },
+        g = { ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+          "Find Text Pattern In All Files" },
         h = { "<cmd> Telescope help_tags<CR>", "Search help" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
@@ -69,6 +71,7 @@ return {
         w = { "<cmd> Telescope grep_string<CR>", "Search for current word" }
       },
       g = {
+        name = "Git tools",
         l = { "<cmd>LazyGit<cr>", "Lazy Git" },
         b = { "<cmd>GBrowse<cr>", "Open In Browser" }
       },
