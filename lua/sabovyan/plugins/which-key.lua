@@ -20,7 +20,7 @@ return {
     }
 
     local mappings = {
-      ["t"] = { '<cmd>ToggleTerm<CR>', 'Open Terminal'},
+      ["t"] = { '<cmd>ToggleTerm<CR>', 'Open Terminal' },
       ["e"] = { '<cmd>NeoTreeRevealToggle<CR>', "Open neo tree" },
       -- ["o"] = { '<cmd>NeoTreeFocus<CR>', "Focus Neo Tree" },
       ["o"] = { function()
@@ -30,7 +30,6 @@ return {
           vim.cmd.Neotree "focus"
         end
       end, "Focus Neo Tree" },
-      ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" }, -- Close current file
       ["s"] = { "<cmd>w!<CR>", "Save" },             -- Save current file
       -- See `:help telescope.builtin`
       ["<space>"] = { require('telescope.builtin').buffers, '[ ] Find existing buffers' },
@@ -50,12 +49,12 @@ return {
       b = {
         x = { "<cmd>e unknown<CR>", "New Buffer" },
         p = { "<cmd>BufferLineTogglePin<CR>", "Pin Buffer" },
-        n = { "<cmd>bnext<CR>", "Next Buffer" }
       },
       -- Telescope
       f = {
         name = "File Search",
         c = { "<cmd>Telescope commands<cr>", "Commands" },
+        s = { "<cmd>Telescope spell_suggest<CR>", "Spell" },
         -- c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         d = { "<md> Telescope diagnostics<CR>", "Find diagnostics" },
         f = { "<cmd>Telescope find_files<CR>", "Find files" },
