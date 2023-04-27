@@ -12,11 +12,11 @@ vim.g.maplocalleader = " "
 keymap("i", "jj", "<Esc>")
 
 keymap({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-keymap({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", opts)
-
--- vim.keymap.set("n", "<leader>ne", vim.cmd.Ex, { desc = "Open Navite Explorer" })
 
 -- Normal Mode --
+
+keymap({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", opts)
+-- vim.keymap.set("n", "<leader>ne", vim.cmd.Ex, { desc = "Open Navite Explorer" })
 
 -- Remap for dealing with word wrap
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
