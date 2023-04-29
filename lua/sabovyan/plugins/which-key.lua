@@ -75,6 +75,7 @@ return {
 				r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 				t = { "<cmd>TodoTelescope<CR>", "Find hilighted comments" },
 				w = { "<cmd> Telescope grep_string<CR>", "Search for current word" },
+				R = { "<cmd> Telescope lsp_references<CR>", "Search variable references" },
 			},
 			g = {
 				name = "Git tools",
