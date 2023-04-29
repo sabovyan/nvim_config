@@ -9,9 +9,9 @@ local keymap = vim.keymap.set
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap("i", "jj", "<Esc>")
+keymap("i", "jj", "<Esc>", { silent = true })
 
-keymap({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+keymap({ "n", "v" }, "<Space>", "<Nop>", opts)
 
 -- Normal Mode --
 
