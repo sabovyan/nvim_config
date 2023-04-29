@@ -5,15 +5,15 @@ local lga_actions = require("telescope-live-grep-args.actions")
 -- See `:help telescope` and `:help telescope.setup()`
 telescope.setup({
 	defaults = {
-		file_ignore_patterns = {
-			"node_modules",
-			"build",
-			"dist",
-			".next",
-			"package-lock.json",
-			"yarn.lock",
-			".git",
-		},
+		-- file_ignore_patterns = {
+		-- 	"node_modules",
+		-- 	"build",
+		-- 	"dist",
+		-- 	".next",
+		-- 	"package-lock.json",
+		-- 	"yarn.lock",
+		-- 	".git",
+		-- },
 		selection_caret = "  ",
 		mappings = {
 			i = {
@@ -41,7 +41,7 @@ telescope.setup({
 			case_mode = "smart_case",
 		},
 		live_grep_args = {
-			path_display = { "shorten" },
+			-- path_display = { "shorten"},
 			auto_quoting = true, -- enable/disable auto-quoting
 			mappings = {
 				i = {
@@ -61,6 +61,7 @@ telescope.setup({
 			cwd_only = true,
 		},
 		find_files = {
+			theme = "dropdown",
 			hidden = true,
 			find_command = {
 				"rg",
