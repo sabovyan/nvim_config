@@ -1,36 +1,30 @@
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system {
-    'git',
-    'clone',
-    '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable', -- latest stable release
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
     lazypath,
-  }
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
+require("lazy").setup({
 
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
+  "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
 
   -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+  "tpope/vim-sleuth",
 
-  {
-    'echasnovski/mini.animate',
-    config = function()
-      require("mini.animate").setup()
-    end
-  },
   -- TODO handle session manager
 
   -- { "Shatur/neovim-session-manager", event = "BufWritePost", cmd = "SessionManager" },
   -- "gc" to comment visual regions/lines
 
-  { 'numToStr/Comment.nvim',    opts = {} },
+  { "numToStr/Comment.nvim", opts = {} },
   -- NOTE Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -43,7 +37,5 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
-  { import = 'sabovyan.plugins' },
+  { import = "sabovyan.plugins" },
 }, {})
-
-
