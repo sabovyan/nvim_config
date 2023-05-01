@@ -80,9 +80,11 @@ return {
       g = {
         name = "Git tools",
         l = { "<cmd>LazyGit<cr>", "Lazy Git" },
-        b = { "<cmd>GBrowse<cr>", "Open In Browser" },
+        B = { "<cmd>GBrowse<cr>", "Open In Browser" },
       },
-      -- TODO change save to ctrl - S
+      h = {
+        name = "Git Signs",
+      },
     }
     wk.register(mappings, opts)
   end,
