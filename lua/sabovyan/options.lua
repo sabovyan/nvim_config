@@ -2,11 +2,11 @@
 
 local opt = vim.opt
 
-opt.hlsearch = false -- Set highlight on search
+opt.hlsearch = true -- Set highlight on search
 
-opt.number = true         -- Make line numbers default
+opt.number = true -- Make line numbers default
 opt.relativenumber = true -- Relative line numbers
-opt.mouse = 'a'           -- Enable mouse mode
+opt.mouse = "a" -- Enable mouse mode
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -37,36 +37,36 @@ opt.completeopt = "menu,menuone,noselect"
 -- NOTE: You should make sure your terminal supports this
 opt.termguicolors = true
 
-opt.autowrite = true           -- Enable auto write
-opt.conceallevel = 3           -- Hide * markup for bold and italic
-opt.confirm = true             -- Confirm to save changes before exiting modified buffer
-opt.cursorline = true          -- Enable highlighting of the current line
-opt.expandtab = true           -- Use spaces instead of tabs
+opt.autowrite = true -- Enable auto write
+opt.conceallevel = 3 -- Hide * markup for bold and italic
+opt.confirm = true -- Confirm to save changes before exiting modified buffer
+opt.cursorline = true -- Enable highlighting of the current line
+opt.expandtab = true -- Use spaces instead of tabs
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
 opt.inccommand = "nosplit" -- preview incremental substitute
 opt.incsearch = true
 opt.laststatus = 0
-opt.list = true                    -- Show some invisible characters (tabs...
-opt.pumblend = 10                  -- Popup blend
-opt.pumheight = 10                 -- Maximum number of entries in a popup
-opt.scrolloff = 5                  -- Lines of context
+opt.list = true -- Show some invisible characters (tabs...
+opt.pumblend = 10 -- Popup blend
+opt.pumheight = 10 -- Maximum number of entries in a popup
+opt.scrolloff = 5 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
-opt.shiftround = true              -- Round indent
-opt.shiftwidth = 2                 -- Size of an indent
-opt.shortmess:append { W = true, I = true, c = true }
-opt.showmode = false               -- Dont show mode since we have a statusline
-opt.sidescrolloff = 8              -- Columns of context
-opt.smartindent = true             -- Insert indents automatically
+opt.shiftround = true -- Round indent
+opt.shiftwidth = 2 -- Size of an indent
+opt.shortmess:append({ W = true, I = true, c = true })
+opt.showmode = false -- Dont show mode since we have a statusline
+opt.sidescrolloff = 8 -- Columns of context
+opt.smartindent = true -- Insert indents automatically
 opt.spelllang = { "en" }
-opt.splitbelow = true              -- Put new windows below current
-opt.splitright = true              -- Put new windows right of current
-opt.tabstop = 2                    -- Number of spaces tabs count for
+opt.splitbelow = true -- Put new windows below current
+opt.splitright = true -- Put new windows right of current
+opt.tabstop = 2 -- Number of spaces tabs count for
 opt.undolevels = 10000
 opt.wildmode = "longest:full,full" -- Command-line completion mode
-opt.winminwidth = 5                -- Minimum window width
-opt.wrap = false                   -- Disable line wrap
+opt.winminwidth = 5 -- Minimum window width
+opt.wrap = false -- Disable line wrap
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
