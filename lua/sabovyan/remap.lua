@@ -22,6 +22,12 @@ keymap({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", opts)
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Move to window using the <ctrl> hjkl keys
+keymap("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+keymap("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+keymap("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+keymap("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+
 -- moving between buffers
 keymap("n", "<S-l>", "<cmd>bn<cr>", opts)
 keymap("n", "<S-h>", "<cmd>bp<cr>", opts)
