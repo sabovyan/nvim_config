@@ -11,6 +11,8 @@ return {
   },
   opts = {
     filesystem = {
+      follow_current_file = true,
+      use_libuv_file_watcher = true,
       filtered_items = {
         visible = true,
         hide_dotfiles = false,
@@ -20,7 +22,17 @@ return {
         },
       },
     },
+
     default_component_configs = {
+      container = {
+        enable_character_fade = true,
+      },
+      indent = {
+        with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+        expander_collapsed = "",
+        expander_expanded = "",
+        expander_highlight = "NeoTreeExpander",
+      },
       git_status = {
         symbols = {
           -- Change type
